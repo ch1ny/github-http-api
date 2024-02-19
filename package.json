@@ -1,11 +1,17 @@
 {
   "name": "@ch1ny/github-http-api",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.2",
   "description": "",
   "main": "./lib/index.cjs.js",
   "module": "./lib/index.esm.js",
   "types": "./lib/types/entry/cjs.d.ts",
   "jsdelivr": "./lib/index.umd.js",
+  "files": [
+    "lib",
+    "package.json",
+		"LICENSE",
+    "readme.md"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:clean": "rm -rf lib",
@@ -18,8 +24,8 @@
     "commitlint": "commitlint"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "ch1ny",
+  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^18.6.1",
     "@commitlint/config-conventional": "^18.6.2",
