@@ -1,0 +1,56 @@
+{
+  "name": "@ch1ny/github-http-api",
+  "version": "0.0.1-alpha.1",
+  "description": "",
+  "main": "./lib/index.cjs.js",
+  "module": "./lib/index.esm.js",
+  "types": "./lib/types/entry/cjs.d.ts",
+  "jsdelivr": "./lib/index.umd.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:clean": "rm -rf lib",
+    "build": "npm run build:clean&&webpack --mode production",
+    "prepublishOnly": "npm run build",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives",
+    "format": "prettier --write .",
+    "commitlint": "commitlint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.2",
+    "@commitlint/types": "^18.6.1",
+    "@types/node": "^20.11.19",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "commitlint": "^18.6.1",
+    "eslint": "^8.56.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "axios": "^1.6.7"
+  },
+  "exports": {
+    ".": {
+      "types": "./lib/types/entry/cjs.d.ts",
+      "import": "./lib/index.esm.js",
+      "require": "./lib/index.cjs.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "npm run format",
+      "npm run lint -s --"
+    ]
+  }
+}
