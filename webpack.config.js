@@ -9,6 +9,7 @@ const OUT_DIR = path.join(PROJECT_DIR, 'lib');
  */
 const commonjsConfig = {
   externals: {
+    axios: 'axios',
     // https: "require('https')",
     https: 'https',
   },
