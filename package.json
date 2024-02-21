@@ -9,7 +9,7 @@
   "files": [
     "lib",
     "package.json",
-		"LICENSE",
+    "LICENSE",
     "readme.md"
   ],
   "scripts": {

@@ -1,2 +1,2 @@
-export * from '../instance/esm';
-export * from '../types';
+export { createInstance } from '../instance/esm';
+export type * from '../types';
